@@ -20,10 +20,10 @@ export class Product {
     @Column()
     type:number;
 
-    @Column({ type: "tinyint"})
+    @Column({ type: "tinyint", default: 1})
     visible:number;
 
-    @Column( { type: "tinyint"})
+    @Column( { type: "tinyint", default: 0})
     itsSale: number;
 
     @Column({type:"text"})
