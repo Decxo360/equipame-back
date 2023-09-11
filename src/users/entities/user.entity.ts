@@ -16,14 +16,14 @@ export class User {
 
     @Column({length:200})
     password:string;
-    
-    @Column({length:200})
+
+    @Column({length:200, unique:true})
     email:string;
 
-    @Column({length:200})
+    @Column({length:200, default: "user"})
     type:string;
 
-    @Column({default: 1})
+    @Column({default: 0})
     membership:number;
 
     @Column({length:200})
