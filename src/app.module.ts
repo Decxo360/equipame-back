@@ -2,10 +2,10 @@ import { Module } from '@nestjs/common';
 import { ProductsModule } from './products/products.module';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
-    ProductsModule,
     TypeOrmModule.forRoot({
       type:'mysql',
       host:'localhost',
@@ -16,7 +16,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       autoLoadEntities: true,
       synchronize:true
     }),
-    UsersModule
+    ProductsModule,
+    UsersModule,
+    PostsModule
   ],
   controllers: [],
   providers: [],
